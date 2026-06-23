@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Script output
+scripts/stars-data.txt
+
+# Temporary
+*.tmp
+*.log

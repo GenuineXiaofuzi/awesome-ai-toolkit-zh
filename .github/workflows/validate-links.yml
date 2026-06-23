@@ -1,0 +1,46 @@
+name: Validate Links
+
+on:
+  push:
+    paths:
+      - "README.md"
+      - "README-zh.md"
+  pull_request:
+    paths:
+      - "README.md"
+      - "README-zh.md"
+  schedule:
+    - cron: "0 0 * * 0" # Weekly on Sunday
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract & Check Links
+        run: |
+          echo "Checking links in README files..."
+          FAILED=0
+          for file in README.md README-zh.md; do
+            if [ -f "$file" ]; then
+              echo "--- $file ---"
+              URLs=$(grep -oP 'https://github\.com/[a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+' "$file" | sort -u)
+              for url in $URLs; do
+                STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$url")
+                if [ "$STATUS" = "200" ] || [ "$STATUS" = "302" ] || [ "$STATUS" = "301" ]; then
+                  echo "  ✅ $url"
+                else
+                  echo "  ❌ $url (HTTP $STATUS)"
+                  FAILED=1
+                fi
+              done
+            fi
+          done
+          if [ "$FAILED" = "1" ]; then
+            echo ""
+            echo "⚠️  Some links are broken. Please fix them."
+            exit 1
+          fi
+          echo ""
+          echo "✅ All links valid!"
