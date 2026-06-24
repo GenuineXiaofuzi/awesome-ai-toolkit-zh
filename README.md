@@ -2,337 +2,326 @@
 
 # 🌟 Awesome AI Resources
 
-**MCP Servers · Agent Skills · AI Tools · Best Practices**
+**MCP 服务器 · Agent 技能 · AI 工具 · 最佳实践**
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](LICENSE)
-[![Updated Weekly](https://img.shields.io/badge/Updated-Weekly-blue)]()
+[![Updated Weekly](https://img.shields.io/badge/更新频率-每周-blue)]()
 
-*The most comprehensive, hand-curated collection of AI agent resources. Every entry tested, compared, and annotated.*
-
-[English](README.md) | [中文](README-zh.md)
+*最全面、最精选的 AI Agent 资源合集。每个条目都经过实测、对比、注释。*
 
 </div>
 
 ---
 
-## 📖 What is this?
+## 📖 这是什么？
 
-This is **not just another awesome list**. Every resource here is:
-- **✏️ Annotated** — not just a link, but a concise summary of what it does and why it matters
-- **🧪 Tested** — we actually try things before recommending them
-- **📊 Compared** — alternatives are listed side by side with tradeoffs
-- **🔄 Maintained** — updated weekly to keep pace with the AI agent explosion
+**不只一个 awesome list。** 这里的每一个资源都：
 
-### Coverage
+- **✏️ 有注释** — 不是光扔一个链接，而是有简洁的功能说明和推荐理由
+- **🧪 经过实测** — 推荐之前我们都真的用过
+- **📊 有对比** — 同类工具并列呈现，优缺点一目了然
+- **🔄 持续更新** — 每周更新，紧跟 AI Agent 爆炸式发展
 
-| Section | Entries | Focus |
-|---------|---------|-------|
-| [MCP Servers](#mcp-servers) | 150+ | Production-ready servers, organized by category |
-| [MCP Clients](#mcp-clients) | 30+ | Desktop, CLI, and IDE clients |
-| [Agent Skills](#agent-skills) | 200+ | Claude Code, Cursor, Codex, and more |
-| [AI Agent Frameworks](#ai-agent-frameworks) | 40+ | Multi-agent, autonomous, and workflow frameworks |
-| [Tools & Platforms](#tools--platforms) | 80+ | AI-enhanced dev tools and platforms |
-| [Tutorials & Courses](#tutorials--courses) | 30+ | Free and paid learning resources |
-| [Best Practices](#best-practices) | 20+ | Patterns, anti-patterns, and production checklists |
+### 覆盖面
 
----
-
-## 🔌 MCP Servers
-
-> [Model Context Protocol](https://modelcontextprotocol.io) enables AI models to securely interact with external data and tools. Below are production-ready MCP server implementations.
-
-### 📂 Knowledge & Memory
-
-| Server | Stars | Description |
-|--------|-------|-------------|
-| [mem0ai/mem0](https://github.com/mem0ai/mem0) | ~59k | Universal memory layer for AI agents — persistent, searchable, self-improving |
-| [RooVetGit/Roo-Code](https://github.com/RooVetGit/Roo-Code) | ~15k | Autonomous coding agent with built-in memory management |
-| [neo4j-contrib/mcp-neo4j](https://github.com/neo4j-contrib/mcp-neo4j) | ~1.5k | Neo4j graph database integration for AI agents |
-
-### 🔍 Search & Web
-
-| Server | Stars | Description |
-|--------|-------|-------------|
-| [modelcontextprotocol/servers/src/brave-search](https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search) | ~87k* | Official Brave Search MCP server |
-| [anthropics/claude-code](https://github.com/anthropics/claude-code) | ~134k | Claude Code built-in web search and context fetching |
-| [exa-labs/exa-mcp-server](https://github.com/exa-labs/exa-mcp-server) | ~2k | Exa AI-powered search for real-time web data |
-
-### 🗄️ Database & Storage
-
-| Server | Stars | Description |
-|--------|-------|-------------|
-| [tinybirdco/mcp-tinybird](https://github.com/tinybirdco/mcp-tinybird) | ~1k | Real-time analytics API integration |
-| [qdrant/mcp-server-qdrant](https://github.com/qdrant/mcp-server-qdrant) | ~2k | Qdrant vector database for semantic search and RAG |
-| [run-llama/mcp-server-llamacloud](https://github.com/run-llama/mcp-server-llamacloud) | ~1k | LlamaIndex document parsing and indexing |
-
-### 📁 File System
-
-| Server | Stars | Description |
-|--------|-------|-------------|
-| [modelcontextprotocol/servers/src/filesystem](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem) | ~87k* | Official filesystem operations server |
-| [hmk/attio-mcp-server](https://github.com/hmk/attio-mcp-server) | ~500 | CRM data access for AI agents |
-
-### 🐙 Git & Development
-
-| Server | Stars | Description |
-|--------|-------|-------------|
-| [modelcontextprotocol/servers/src/github](https://github.com/modelcontextprotocol/servers/tree/main/src/github) | ~87k* | Official GitHub API integration |
-| [modelcontextprotocol/servers/src/git](https://github.com/modelcontextprotocol/servers/tree/main/src/git) | ~87k* | Git operations for AI agents |
-
-### 📊 Communication & Productivity
-
-| Server | Stars | Description |
-|--------|-------|-------------|
-| [modelcontextprotocol/servers/src/slack](https://github.com/modelcontextprotocol/servers/tree/main/src/slack) | ~87k* | Slack workspace integration |
-| [modelcontextprotocol/servers/src/google-maps](https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps) | ~87k* | Google Maps and geolocation services |
-
-> 💡 **Looking for more?** [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) maintains a community-curated list. We highlight the **most battle-tested** ones here.
+| 板块 | 条目数 | 内容 |
+|------|--------|------|
+| [MCP 服务器](#mcp-服务器) | 150+ | 生产环境可用的 MCP 服务器，按分类整理 |
+| [MCP 客户端](#mcp-客户端) | 30+ | 桌面端、命令行、IDE 客户端 |
+| [Agent 技能](#agent-技能) | 200+ | Claude Code、Cursor、Codex 等平台技能 |
+| [AI Agent 框架](#ai-agent-框架) | 40+ | 多智能体、自主智能体、工作流框架 |
+| [工具与平台](#工具与平台) | 80+ | AI 增强的开发工具和平台 |
+| [教程与课程](#教程与课程) | 30+ | 免费和付费学习资源 |
+| [最佳实践](#最佳实践) | 20+ | 设计模式、反模式、生产级清单 |
 
 ---
 
-## 💻 MCP Clients
+## 🔌 MCP 服务器
 
-| Client | Stars | Platform | Description |
-|--------|-------|----------|-------------|
-| [Claude Desktop](https://claude.ai/download) | — | Mac/Win | Anthropic's official desktop app with MCP support |
-| [Continue](https://github.com/continuedev/continue) | ~20k | VS Code / JetBrains | Open-source AI code assistant with MCP integration |
-| [Cline](https://github.com/cline/cline) | ~18k | VS Code | Autonomous coding agent in your editor |
-| [5ire](https://github.com/nicholasgriffintn/5ire) | ~1k | Desktop | Cross-platform MCP client with built-in tools |
-| [MCPHub](https://github.com/steipete/MCPHub) | ~500 | macOS | Native macOS MCP client with system integrations |
-| [Zed](https://github.com/zed-industries/zed) | ~50k | Mac/Linux | Next-gen code editor with built-in AI and MCP |
-| [Sourcegraph Cody](https://github.com/sourcegraph/cody) | ~5k | VS Code / Web | AI coding assistant with MCP server support |
+> [Model Context Protocol](https://modelcontextprotocol.io) 让 AI 模型可以安全地与外部数据和工具交互。以下是经过验证的生产级 MCP 服务器。
 
-> 🔗 See also: [punkpeye/awesome-mcp-clients](https://github.com/punkpeye/awesome-mcp-clients)
+### 📂 知识库与记忆
 
----
+| 项目 | 作者 | 描述 | 语言 | Star | 链接 |
+|------|------|------|------|------|------|
+| mem0 | mem0ai | AI Agent 通用记忆层 — 持久化、可搜索、自优化 | Python | 59K | [GitHub](https://github.com/mem0ai/mem0) |
+| Roo-Code | RooVetGit | 内置记忆管理的自主编程 Agent | TypeScript | 15K | [GitHub](https://github.com/RooVetGit/Roo-Code) |
+| mcp-neo4j | neo4j-contrib | Neo4j 图数据库集成，赋能知识图谱查询 | Python | 1.5K | [GitHub](https://github.com/neo4j-contrib/mcp-neo4j) |
 
-## 🎯 Agent Skills
+### 🔍 搜索与网络
 
-> Agent Skills are reusable capabilities that extend AI coding agents. They work with Claude Code, Cursor, Codex CLI, Gemini CLI, and other agentic platforms.
+| 项目 | 作者 | 描述 | 语言 | Star | 链接 |
+|------|------|------|------|------|------|
+| Brave Search | modelcontextprotocol | Anthropic 官方 Brave 搜索引擎集成 | TypeScript | 87K | [GitHub](https://github.com/modelcontextprotocol/servers) |
+| exa-mcp-server | exa-labs | Exa AI 驱动的实时网页搜索 | Python | 2K | [GitHub](https://github.com/exa-labs/exa-mcp-server) |
 
-### 💻 Coding & Development
+### 🗄️ 数据库与存储
 
-| Skill | Stars | Platform | Description |
-|-------|-------|----------|-------------|
-| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | ~66k | Claude Code, Cursor | Production-grade engineering skills library |
-| [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) | ~66k | Claude, Cursor, Codex | 1000+ skills across 16 categories |
-| [obra/superpowers](https://github.com/obra/superpowers) | ~236k | Claude Code | Agentic skills framework — the origin of SKILL.md format |
-| [K-Dense-AI/scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) | ~29k | Claude Code, Cursor | 140+ ready-to-use skills for scientific computing |
-| [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | ~46k | Claude Code | Research and summarization skill for staying current |
+| 项目 | 作者 | 描述 | 语言 | Star | 链接 |
+|------|------|------|------|------|------|
+| mcp-server-qdrant | qdrant | Qdrant 向量数据库，语义搜索与 RAG | Python | 2K | [GitHub](https://github.com/qdrant/mcp-server-qdrant) |
+| mcp-server-llamacloud | run-llama | LlamaIndex 文档解析和索引 | Python | 1K | [GitHub](https://github.com/run-llama/mcp-server-llamacloud) |
+| mcp-tinybird | tinybirdco | 实时分析 API，适合数据看板场景 | Python | 1K | [GitHub](https://github.com/tinybirdco/mcp-tinybird) |
 
-### 📝 Writing & Content
+### 📁 文件系统
 
-| Skill | Stars | Platform | Description |
-|-------|-------|----------|-------------|
-| [steipete/TranslateSkills](https://github.com/steipete/TranslateSkills) | ~1k | Claude Code | Multi-language translation with context awareness |
-| [HumanAIGC/AwesomeAIWriting](https://github.com/HumanAIGC/AwesomeAIWriting) | ~3k | General | Curated list of AI writing tools and techniques |
+| 项目 | 作者 | 描述 | 语言 | Star | 链接 |
+|------|------|------|------|------|------|
+| File System | modelcontextprotocol | 官方文件系统操作服务器 | TypeScript | 87K | [GitHub](https://github.com/modelcontextprotocol/servers) |
 
-### 📈 Marketing & Business
+### 🐙 Git 与开发
 
-| Skill | Stars | Platform | Description |
-|-------|-------|----------|-------------|
-| [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) | ~35k | Claude Code, Cursor | Marketing-specific agent skills — SEO, content, analytics |
-| [presidio-oss/presidio-skills](https://github.com/presidio-oss/presidio-skills) | ~500 | Claude Code | PII detection and data privacy for AI agents |
+| 项目 | 作者 | 描述 | 语言 | Star | 链接 |
+|------|------|------|------|------|------|
+| GitHub | modelcontextprotocol | 官方 GitHub API 集成 | TypeScript | 87K | [GitHub](https://github.com/modelcontextprotocol/servers) |
+| Git | modelcontextprotocol | Git 版本控制操作 | TypeScript | 87K | [GitHub](https://github.com/modelcontextprotocol/servers) |
 
-### 🔧 DevOps & Infrastructure
+### 📊 通讯与效率
 
-| Skill | Stars | Platform | Description |
-|-------|-------|----------|-------------|
-| [hashicorp/terraform-cdk-ai](https://github.com/hashicorp/terraform-cdk-ai) | ~500 | Claude Code | Infrastructure-as-code generation skills |
-| [pulumi/pulumi-ai-agent](https://github.com/pulumi/pulumi-ai-agent) | ~500 | Claude Code | Cloud resource management via natural language |
+| 项目 | 作者 | 描述 | 语言 | Star | 链接 |
+|------|------|------|------|------|------|
+| Slack | modelcontextprotocol | Slack 工作空间集成 | TypeScript | 87K | [GitHub](https://github.com/modelcontextprotocol/servers) |
+| Google Maps | modelcontextprotocol | 谷歌地图和地理服务 | TypeScript | 87K | [GitHub](https://github.com/modelcontextprotocol/servers) |
 
-### 🧪 Testing & QA
-
-| Skill | Stars | Platform | Description |
-|-------|-------|----------|-------------|
-| [browserbase/mcp-server-playwright](https://github.com/browserbase/mcp-server-playwright) | ~3k | Claude Code | Browser automation and testing skills |
-| [microsoft/playwright-mcp](https://github.com/microsoft/playwright-mcp) | ~10k | Claude Code | Microsoft's official Playwright MCP integration |
+> 💡 **想找更多？** [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) 维护着社区共建的 MCP 服务器列表。我们这里只收录**实战验证过**的。
 
 ---
 
-## 🤖 AI Agent Frameworks
+## 💻 MCP 客户端
 
-### Multi-Agent & Autonomous
+| 项目 | 作者 | 描述 | 平台 | Star | 链接 |
+|------|------|------|------|------|------|
+| Claude Desktop | Anthropic | 官方桌面应用，原生支持 MCP | Mac/Win | — | [下载](https://claude.ai/download) |
+| Continue | continuedev | 开源 AI 代码助手，支持 MCP 集成 | VS Code / JetBrains | 20K | [GitHub](https://github.com/continuedev/continue) |
+| Cline | cline | 编辑器里的自主编程 Agent | VS Code | 18K | [GitHub](https://github.com/cline/cline) |
+| 5ire | nicholasgriffintn | 跨平台 MCP 客户端，内置工具 | 桌面端 | 1K | [GitHub](https://github.com/nicholasgriffintn/5ire) |
+| Zed | zed-industries | 新一代编辑器，内置 AI 和 MCP | Mac/Linux | 50K | [GitHub](https://github.com/zed-industries/zed) |
+| Sourcegraph Cody | sourcegraph | AI 编程助手，支持 MCP 服务器 | VS Code / Web | 5K | [GitHub](https://github.com/sourcegraph/cody) |
 
-| Framework | Stars | Language | Description |
-|-----------|-------|----------|-------------|
-| [CrewAIInc/crewAI](https://github.com/CrewAIInc/crewAI) | ~22k | Python | Role-playing autonomous AI agents that collaborate |
-| [microsoft/autogen](https://github.com/microsoft/autogen) | ~37k | Python | Multi-agent conversation framework by Microsoft |
-| [Significant-Gravitas/AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) | ~170k | Python | The original autonomous AI agent |
-| [joaomdmoura/crewAI](https://github.com/joaomdmoura/crewAI) | ~22k | Python | AI agent teams that work together |
-| [TransformerOptimus/SuperAGI](https://github.com/TransformerOptimus/SuperAGI) | ~15k | Python | Open-source autonomous AI agent framework |
-| [geekan/MetaGPT](https://github.com/geekan/MetaGPT) | ~44k | Python | Multi-agent meta-programming framework |
-
-### Workflow & Orchestration
-
-| Framework | Stars | Language | Description |
-|-----------|-------|----------|-------------|
-| [langchain-ai/langgraph](https://github.com/langchain-ai/langgraph) | ~10k | Python | Stateful, multi-actor agent workflows |
-| [n8n-io/n8n](https://github.com/n8n-io/n8n) | ~51k | TypeScript | Fair-code workflow automation with 400+ integrations |
-| [PrefectHQ/prefect](https://github.com/PrefectHQ/prefect) | ~18k | Python | Workflow orchestration for data and ML pipelines |
-| [run-llama/llama-agents](https://github.com/run-llama/llama-agents) | ~2k | Python | Async-first agent orchestration by LlamaIndex |
-
-### Specialized Agents
-
-| Framework | Stars | Language | Description |
-|-----------|-------|----------|-------------|
-| [OpenInterpreter/open-interpreter](https://github.com/OpenInterpreter/open-interpreter) | ~56k | Python | Let LLMs run code on your computer |
-| [gptengineer-org/gpt-engineer](https://github.com/gptengineer-org/gpt-engineer) | ~52k | Python | AI that builds entire codebases from prompts |
-| [princeton-nlp/SWE-agent](https://github.com/princeton-nlp/SWE-agent) | ~14k | Python | Autonomous agent for software engineering tasks |
-| [All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands) | ~43k | Python | AI-powered software development platform |
+> 🔗 相关列表：[punkpeye/awesome-mcp-clients](https://github.com/punkpeye/awesome-mcp-clients)
 
 ---
 
-## 🛠️ Tools & Platforms
+## 🎯 Agent 技能
 
-### AI-Enhanced IDEs & Editors
+> Agent Skills 是扩展 AI 编程 Agent 能力的可复用模块。适用于 Claude Code、Cursor、Codex CLI、Gemini CLI 等平台。
 
-| Tool | Stars | Description |
-|------|-------|-------------|
-| [zed-industries/zed](https://github.com/zed-industries/zed) | ~50k | High-performance editor with MCP and AI support |
-| [voideditor/void](https://github.com/voideditor/void) | ~10k | Open-source Cursor alternative |
-| [pearai/pearai-app](https://github.com/pearai/pearai-app) | ~5k | Open-source AI code editor |
+### 💻 编程与开发
 
-### Memory & Context for Agents
+| 项目 | 作者 | 描述 | 平台 | Star | 链接 |
+|------|------|------|------|------|------|
+| agent-skills | addyosmani | 生产级工程技能库 | Claude Code, Cursor | 66K | [GitHub](https://github.com/addyosmani/agent-skills) |
+| awesome-claude-skills | ComposioHQ | 1000+ 技能，16 大分类 | Claude, Cursor, Codex | 66K | [GitHub](https://github.com/ComposioHQ/awesome-claude-skills) |
+| superpowers | obra | Agent 技能框架 — SKILL.md 格式的起源 | Claude Code | 236K | [GitHub](https://github.com/obra/superpowers) |
+| scientific-agent-skills | K-Dense-AI | 140+ 科研计算即用技能 | Claude Code, Cursor | 29K | [GitHub](https://github.com/K-Dense-AI/scientific-agent-skills) |
+| last30days-skill | mvanhorn | 研究总结技能 | Claude Code | 46K | [GitHub](https://github.com/mvanhorn/last30days-skill) |
 
-| Tool | Stars | Description |
-|------|-------|-------------|
-| [mem0ai/mem0](https://github.com/mem0ai/mem0) | ~59k | Universal memory layer for AI agents |
-| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | ~24k | Persistent memory benchmarks for coding agents |
-| [OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files) | ~24k | File-based persistent planning for AI agents |
-| [volcengine/OpenViking](https://github.com/volcengine/OpenViking) | ~26k | Open-source context database for AI agents |
+### 📝 写作与内容
 
-### Prompt Engineering
+| 项目 | 作者 | 描述 | 平台 | Star | 链接 |
+|------|------|------|------|------|------|
+| TranslateSkills | steipete | 上下文感知的多语言翻译技能 | Claude Code | 1K | [GitHub](https://github.com/steipete/TranslateSkills) |
 
-| Tool | Stars | Description |
-|------|-------|-------------|
-| [dair-ai/Prompt-Engineering-Guide](https://github.com/dair-ai/Prompt-Engineering-Guide) | ~76k | Comprehensive prompt engineering resource |
-| [anthropics/courses](https://github.com/anthropics/courses) | ~10k | Anthropic's official prompt engineering courses |
-| [brexhq/prompt-engineering](https://github.com/brexhq/prompt-engineering) | ~8k | Brex's pragmatic prompt engineering guide |
+### 📈 营销与商业
 
-### AI Tools Collection
+| 项目 | 作者 | 描述 | 平台 | Star | 链接 |
+|------|------|------|------|------|------|
+| marketingskills | coreyhaines31 | 营销专用 Agent 技能 — SEO、内容、分析 | Claude Code, Cursor | 35K | [GitHub](https://github.com/coreyhaines31/marketingskills) |
 
-| Resource | Stars | Description |
-|----------|-------|-------------|
-| [ikaijua/Awesome-AITools](https://github.com/ikaijua/Awesome-AITools) | ~6k | Chinese AI tools collection |
-| [yzfly/Awesome-MCP-ZH](https://github.com/yzfly/Awesome-MCP-ZH) | ~7k | Chinese MCP resource hub |
-| [Doriandarko/awesome-ai-tools](https://github.com/Doriandarko/awesome-ai-tools) | ~4k | Curated list of AI tools and products |
+### 🔧 DevOps 与基础设施
 
----
+| 项目 | 作者 | 描述 | 平台 | Star | 链接 |
+|------|------|------|------|------|------|
+| terraform-cdk-ai | hashicorp | 基础设施即代码生成 | Claude Code | 500 | [GitHub](https://github.com/hashicorp/terraform-cdk-ai) |
+| pulumi-ai-agent | pulumi | 自然语言管理云资源 | Claude Code | 500 | [GitHub](https://github.com/pulumi/pulumi-ai-agent) |
 
-## 📚 Tutorials & Courses
+### 🧪 测试与质量保障
 
-### Free Courses
-
-| Course | Stars | Provider | Topics |
-|--------|-------|----------|--------|
-| [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | ~68k | Microsoft | 12-lesson AI agent course |
-| [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners) | ~65k | Microsoft | 21-lesson GenAI course |
-| [anthropics/courses](https://github.com/anthropics/courses) | ~10k | Anthropic | Prompt engineering and agent design |
-| [openai/openai-cookbook](https://github.com/openai/openai-cookbook) | ~60k | OpenAI | Example code and guides for OpenAI API |
-| [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch) | ~35k | Sebastian Raschka | Build a ChatGPT-like LLM from scratch |
-
-### Practical Tutorials
-
-| Resource | Stars | Description |
-|----------|-------|-------------|
-| [patchy631/ai-engineering-hub](https://github.com/patchy631/ai-engineering-hub) | ~36k | In-depth LLM, RAG, and agent tutorials |
-| [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch) | ~36k | Learn, build, ship AI engineering |
-| [NirDiamant/GenAI_Agents](https://github.com/NirDiamant/GenAI_Agents) | ~23k | 50+ GenAI agent technique tutorials |
-| [Shubhamsaboo/awesome-llm-apps](https://github.com/Shubhamsaboo/awesome-llm-apps) | ~115k | 100+ runnable AI agent and RAG apps |
+| 项目 | 作者 | 描述 | 平台 | Star | 链接 |
+|------|------|------|------|------|------|
+| mcp-server-playwright | browserbase | 浏览器自动化测试 | Claude Code | 3K | [GitHub](https://github.com/browserbase/mcp-server-playwright) |
+| playwright-mcp | microsoft | 微软官方 Playwright MCP 集成 | Claude Code | 10K | [GitHub](https://github.com/microsoft/playwright-mcp) |
 
 ---
 
-## 📐 Best Practices
+## 🤖 AI Agent 框架
 
-### Agent Design Patterns
+### 多智能体与自主智能体
 
-| Resource | Stars | Description |
-|----------|-------|-------------|
-| [humanlayer/12-factor-agents](https://github.com/humanlayer/12-factor-agents) | ~23k | 12 principles for production LLM agents |
-| [anthropics/agent-design-patterns](https://docs.anthropic.com/en/docs/agents-and-tools) | — | Anthropic's official agent design guide |
-| [openai/openai-cookbook](https://github.com/openai/openai-cookbook) | ~60k | Includes agent best practices |
+| 项目 | 作者 | 描述 | 语言 | Star | 链接 |
+|------|------|------|------|------|------|
+| crewAI | CrewAIInc | 角色扮演式自主 AI 智能体协作框架 | Python | 22K | [GitHub](https://github.com/CrewAIInc/crewAI) |
+| autogen | microsoft | 微软多智能体对话框架 | Python | 37K | [GitHub](https://github.com/microsoft/autogen) |
+| AutoGPT | Significant-Gravitas | 自主 AI 智能体的鼻祖 | Python | 170K | [GitHub](https://github.com/Significant-Gravitas/AutoGPT) |
+| MetaGPT | geekan | 多智能体元编程框架，模拟软件公司 | Python | 44K | [GitHub](https://github.com/geekan/MetaGPT) |
+| SuperAGI | TransformerOptimus | 开源自主 AI 智能体框架 | Python | 15K | [GitHub](https://github.com/TransformerOptimus/SuperAGI) |
 
-### Code Quality for Agents
+### 工作流与编排
 
-| Resource | Stars | Description |
-|----------|-------|-------------|
-| [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) | ~59k | Claude Code best practices and conventions |
-| [github/awesome-copilot](https://github.com/github/awesome-copilot) | ~36k | Community Copilot instructions and configurations |
-| [thedaviddias/Front-End-Checklist](https://github.com/thedaviddias/Front-End-Checklist) | ~73k | Frontend checklist for humans and AI agents |
+| 项目 | 作者 | 描述 | 语言 | Star | 链接 |
+|------|------|------|------|------|------|
+| langgraph | langchain-ai | 有状态的多人 Agent 工作流 | Python | 10K | [GitHub](https://github.com/langchain-ai/langgraph) |
+| n8n | n8n-io | 公平代码工作流自动化，400+ 集成 | TypeScript | 51K | [GitHub](https://github.com/n8n-io/n8n) |
+| llama-agents | run-llama | LlamaIndex 异步优先的 Agent 编排 | Python | 2K | [GitHub](https://github.com/run-llama/llama-agents) |
 
-### MCP Best Practices
+### 专业智能体
 
-| Resource | Stars | Description |
-|----------|-------|-------------|
-| [modelcontextprotocol/docs](https://modelcontextprotocol.io) | — | Official MCP specification and guides |
-| [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) | ~90k | Community best practices and examples |
-
----
-
-## 🌐 Community & Resources
-
-### Directories & Hubs
-
-| Resource | Description |
-|----------|-------------|
-| [awesomeagentskills.dev](https://awesomeagentskills.dev) | 8,000+ agent skills, MCP servers, and tools directory |
-| [mcp.so](https://mcp.so) | MCP server discovery and comparison |
-| [glama.ai/mcp](https://glama.ai/mcp) | MCP server registry with badges and docs |
-| [skillsmp.com](https://skillsmp.com) | Agent Skills marketplace and discovery |
-
-### Related Awesome Lists
-
-| List | Stars | Focus |
-|------|-------|-------|
-| [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) | ~90k | MCP servers exclusively |
-| [punkpeye/awesome-mcp-clients](https://github.com/punkpeye/awesome-mcp-clients) | ~7k | MCP clients exclusively |
-| [e2b-dev/awesome-ai-agents](https://github.com/e2b-dev/awesome-ai-agents) | ~28k | AI autonomous agents |
-| [Zijian-Ni/awesome-ai-agents-2026](https://github.com/Zijian-Ni/awesome-ai-agents-2026) | ~1k | 2026 AI agent landscape |
-| [caramaschiHG/awesome-ai-agents-2026](https://github.com/caramaschiHG/awesome-ai-agents-2026) | ~1k | 300+ AI agent resources |
+| 项目 | 作者 | 描述 | 语言 | Star | 链接 |
+|------|------|------|------|------|------|
+| open-interpreter | OpenInterpreter | 让 LLM 在你的电脑上执行代码 | Python | 56K | [GitHub](https://github.com/OpenInterpreter/open-interpreter) |
+| OpenHands | All-Hands-AI | AI 驱动的软件开发平台 | Python | 43K | [GitHub](https://github.com/All-Hands-AI/OpenHands) |
+| SWE-agent | princeton-nlp | 软件工程任务自主 Agent | Python | 14K | [GitHub](https://github.com/princeton-nlp/SWE-agent) |
+| gpt-engineer | gptengineer-org | 从提示词生成整个代码库 | Python | 52K | [GitHub](https://github.com/gptengineer-org/gpt-engineer) |
 
 ---
 
-## 🤝 Contributing
+## 🛠️ 工具与平台
 
-We welcome contributions! Here's how:
+### AI 增强编辑器
 
-### Adding a Resource
+| 项目 | 作者 | 描述 | 语言 | Star | 链接 |
+|------|------|------|------|------|------|
+| Zed | zed-industries | 高性能编辑器，支持 MCP 和 AI | Rust | 50K | [GitHub](https://github.com/zed-industries/zed) |
+| Void | voideditor | 开源的 Cursor 替代品 | TypeScript | 10K | [GitHub](https://github.com/voideditor/void) |
+| PearAI | pearai | 开源 AI 代码编辑器 | TypeScript | 5K | [GitHub](https://github.com/pearai/pearai-app) |
 
-1. **Fork** this repository
-2. **Open an Issue** using the "Resource Suggestion" template (optional, but recommended for discussion)
-3. **Create a PR** with your addition
+### Agent 记忆与上下文
 
-### Requirements
+| 项目 | 作者 | 描述 | 语言 | Star | 链接 |
+|------|------|------|------|------|------|
+| mem0 | mem0ai | AI Agent 通用记忆层 | Python | 59K | [GitHub](https://github.com/mem0ai/mem0) |
+| agentmemory | rohitg00 | 编程 Agent 持久化记忆方案 | Python | 24K | [GitHub](https://github.com/rohitg00/agentmemory) |
+| planning-with-files | OthmanAdi | 基于文件持久化的 AI Agent 规划 | TypeScript | 24K | [GitHub](https://github.com/OthmanAdi/planning-with-files) |
+| OpenViking | volcengine | 开源 AI Agent 上下文数据库 | Go | 26K | [GitHub](https://github.com/volcengine/OpenViking) |
 
-- ⭐ Minimum 100 stars (exceptions for high-quality niche tools)
-- 📝 Include a one-line description
-- 🏷️ Add the appropriate category
-- ✅ Must be actively maintained (last commit < 6 months ago)
+### 提示工程
 
-### Format
+| 项目 | 作者 | 描述 | 语言 | Star | 链接 |
+|------|------|------|------|------|------|
+| Prompt-Engineering-Guide | dair-ai | 最全面的提示工程指南 | — | 76K | [GitHub](https://github.com/dair-ai/Prompt-Engineering-Guide) |
+| courses | anthropics | Anthropic 官方提示工程课程 | — | 10K | [GitHub](https://github.com/anthropics/courses) |
+
+### 中文资源合集
+
+| 项目 | 作者 | 描述 | 语言 | Star | 链接 |
+|------|------|------|------|------|------|
+| Awesome-AITools | ikaijua | AI 实用工具中文合集 | — | 6K | [GitHub](https://github.com/ikaijua/Awesome-AITools) |
+| Awesome-MCP-ZH | yzfly | MCP 资源中文精选 | — | 7K | [GitHub](https://github.com/yzfly/Awesome-MCP-ZH) |
+
+---
+
+## 📚 教程与课程
+
+### 免费课程
+
+| 项目 | 作者 | 描述 | 提供方 | Star | 链接 |
+|------|------|------|--------|------|------|
+| ai-agents-for-beginners | microsoft | 12 节 AI Agent 入门课 | 微软 | 68K | [GitHub](https://github.com/microsoft/ai-agents-for-beginners) |
+| generative-ai-for-beginners | microsoft | 21 节生成式 AI 入门课 | 微软 | 65K | [GitHub](https://github.com/microsoft/generative-ai-for-beginners) |
+| courses | anthropics | 提示工程与 Agent 设计 | Anthropic | 10K | [GitHub](https://github.com/anthropics/courses) |
+| openai-cookbook | openai | API 使用示例与指南 | OpenAI | 60K | [GitHub](https://github.com/openai/openai-cookbook) |
+| LLMs-from-scratch | rasbt | 从零构建类 ChatGPT 大模型 | Sebastian Raschka | 35K | [GitHub](https://github.com/rasbt/LLMs-from-scratch) |
+
+### 实战教程
+
+| 项目 | 作者 | 描述 | Star | 链接 |
+|------|------|------|------|------|
+| ai-engineering-hub | patchy631 | LLM、RAG、Agent 深度教程 | 36K | [GitHub](https://github.com/patchy631/ai-engineering-hub) |
+| ai-engineering-from-scratch | rohitg00 | 从零开始学 AI 工程 | 36K | [GitHub](https://github.com/rohitg00/ai-engineering-from-scratch) |
+| GenAI_Agents | NirDiamant | 50+ GenAI Agent 技术教程 | 23K | [GitHub](https://github.com/NirDiamant/GenAI_Agents) |
+| awesome-llm-apps | Shubhamsaboo | 100+ 可运行的 AI Agent 和 RAG 应用 | 115K | [GitHub](https://github.com/Shubhamsaboo/awesome-llm-apps) |
+
+---
+
+## 📐 最佳实践
+
+### Agent 设计模式
+
+| 项目 | 作者 | 描述 | Star | 链接 |
+|------|------|------|------|------|
+| 12-factor-agents | humanlayer | 生产级 LLM 智能体 12 条原则 | 23K | [GitHub](https://github.com/humanlayer/12-factor-agents) |
+| Agents and Tools | Anthropic | Anthropic 官方 Agent 设计指南 | — | [docs.anthropic.com](https://docs.anthropic.com/en/docs/agents-and-tools) |
+
+### AI 编程质量
+
+| 项目 | 作者 | 描述 | Star | 链接 |
+|------|------|------|------|------|
+| claude-code-best-practice | shanraisshan | Claude Code 最佳实践与规范 | 59K | [GitHub](https://github.com/shanraisshan/claude-code-best-practice) |
+| awesome-copilot | github | 社区 Copilot 指令和配置合集 | 36K | [GitHub](https://github.com/github/awesome-copilot) |
+| Front-End-Checklist | thedaviddias | 面向人类和 AI Agent 的前端清单 | 73K | [GitHub](https://github.com/thedaviddias/Front-End-Checklist) |
+
+### MCP 最佳实践
+
+| 项目 | 作者 | 描述 | Star | 链接 |
+|------|------|------|------|------|
+| MCP 官方规范 | modelcontextprotocol | MCP 官方规范与指南 | — | [modelcontextprotocol.io](https://modelcontextprotocol.io) |
+| awesome-mcp-servers | punkpeye | 社区最佳实践与示例 | 90K | [GitHub](https://github.com/punkpeye/awesome-mcp-servers) |
+
+---
+
+## 🌐 社区与资源
+
+### 导航站
+
+| 项目 | 描述 | 链接 |
+|------|------|------|
+| awesomeagentskills.dev | 8000+ Agent 技能、MCP 服务器、工具目录 | [访问](https://awesomeagentskills.dev) |
+| mcp.so | MCP 服务器发现与对比 | [访问](https://mcp.so) |
+| glama.ai/mcp | MCP 服务器注册中心，含徽章和文档 | [访问](https://glama.ai/mcp) |
+| skillsmp.com | Agent Skills 市场和发现 | [访问](https://skillsmp.com) |
+
+### 相关精选列表
+
+| 项目 | 作者 | 描述 | Star | 链接 |
+|------|------|------|------|------|
+| awesome-mcp-servers | punkpeye | MCP 服务器精选列表 | 90K | [GitHub](https://github.com/punkpeye/awesome-mcp-servers) |
+| awesome-mcp-clients | punkpeye | MCP 客户端精选列表 | 7K | [GitHub](https://github.com/punkpeye/awesome-mcp-clients) |
+| awesome-ai-agents | e2b-dev | AI 自主智能体精选列表 | 28K | [GitHub](https://github.com/e2b-dev/awesome-ai-agents) |
+| awesome-ai-agents-2026 | Zijian-Ni | 2026 AI Agent 生态 | 1K | [GitHub](https://github.com/Zijian-Ni/awesome-ai-agents-2026) |
+| awesome-ai-agents-2026 | caramaschiHG | 300+ AI Agent 资源 | 1K | [GitHub](https://github.com/caramaschiHG/awesome-ai-agents-2026) |
+
+---
+
+## 🤝 贡献指南
+
+欢迎贡献！流程如下：
+
+### 添加资源
+
+1. **Fork** 本仓库
+2. （可选）用「资源建议」模板**提 Issue** 讨论
+3. **提 PR** 加入你的推荐
+
+### 收录要求
+
+- ⭐ 至少 100 Stars（高质量的利基工具例外）
+- 📝 附带一句话描述
+- 🏷️ 放入恰当的分类
+- ✅ 需处于活跃维护状态（最近 6 个月内有提交）
+
+### 格式
 
 ```markdown
-| [owner/repo](https://github.com/owner/repo) | ⭐XXk | Brief, useful description of what it does |
+| 项目名 | 作者 | 描述 | 语言/平台 | XXK | [GitHub](https://github.com/owner/repo) |
 ```
 
-**No AI-generated PRs please.** We review every submission manually to ensure quality.
+**请勿使用 AI 生成 PR。** 我们人工审核每一个提交以确保质量。
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines.
+详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ---
 
-## 📜 License
+## 📜 许可证
 
-[CC0-1.0](LICENSE) — Public domain, do whatever you want.
+[CC0-1.0](LICENSE) — 公共领域，随你发挥。
 
 ---
 
 <div align="center">
 
-**⭐ Star this repo to support our work!**
+**⭐ 点亮 Star 支持我们的工作！**
 
-*Built with ❤️ by the community, for the community*
+*由社区共建，为社区服务 ❤️*
 
 </div>
