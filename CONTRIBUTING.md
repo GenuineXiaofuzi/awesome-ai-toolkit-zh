@@ -26,7 +26,7 @@ Use the **Resource Suggestion** template to propose a new entry. This lets the c
 ## Entry Format
 
 ```markdown
-| [owner/repo](https://github.com/owner/repo) | ⭐XXk | A brief, useful description of what it does. Keep it under 120 characters. |
+| 项目名 | 作者 | 描述 | 语言/平台 | Star | [GitHub](https://github.com/owner/repo) |
 ```
 
 ### Good Descriptions
